@@ -2,8 +2,11 @@
 # JavaScript Development Environment Setup on Ubuntu
 # Author : MI MUKIT
 
-# Set sudo throughout terminal session
-sudo -s
+echo ""
+echo "===================="
+echo " Basic Setup        "
+echo "===================="
+echo ""
 
 # Basic Setup
 #============
@@ -27,3 +30,17 @@ sudo apt install -y curl
 
 # Add 'New Document' on context menu
 touch ~/Templates/Untitled\ Document
+
+
+echo ""
+echo "========================"
+echo " Themes & Customization "
+echo "========================"
+echo ""
+
+# Themes & icons
+#===============
+sudo apt install -y numix-gtk-theme numix-icon-theme-circle macbuntu-os-icons-v9
+
+# Gnome tweak tool
+sudo apt install -y gnome-tweak-tool
