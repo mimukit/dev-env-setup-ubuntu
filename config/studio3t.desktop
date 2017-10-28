@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Name[en_US]=studio3t
+Exec=/opt/studio-3t/bin/studio-3t.sh
+Comment[en_US]=Studio 3T – The IDE for MongoDB
+Name=Studio 3T
+Comment=Studio 3T – The IDE for MongoDB
+Icon=/opt/studio-3t/bin/studio3t.png

@@ -97,3 +97,58 @@ nvm use node
 # Node package manager NPM & Yarn
 npm i -g npm
 npm i -g yarn
+
+
+
+echo ""
+echo "======================"
+echo " Installing Softwares "
+echo "======================"
+echo ""
+
+
+# Softwares
+#==========
+
+# Google Chrome
+cd /tmp
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo gdebi -n google-chrome-stable_current_amd64.deb
+
+# VLC Media Player
+sudo apt install vlc -y
+
+# uGet Downloader
+sudo apt install uget -y
+
+# GitKraken
+cd /tmp
+wget https://release.gitkraken.com/linux/gitkraken-amd64.deb
+sudo gdebi -n gitkraken-amd64.deb
+
+# Sublime Text
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+sudo apt update
+sudo apt install sublime-text -y
+
+# VSCode
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
+sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+sudo apt update
+sudo apt install code -y
+
+# Studio 3T
+cd /tmp
+wget https://download.studio3t.com/studio-3t/linux/5.6.2/studio-3t-linux-x64.tar.gz
+tar -zvxf studio-3t-linux-x64.tar.gz
+sudo mv studio-3t-5.6.2-linux-x64 studio-3t
+sudo mv studio-3t /opt
+wget https://studio3t.com/wp-content/uploads/2017/01/cropped-favicon.png
+sudo mv cropped-favicon.png studio3t.png
+mv studio3t.png /opt/studio-3t/bin/
+sudo cp /Desktop/dev-env-setup-ubuntu/config/studio3t.desktop /usr/share/applications
+
+
+
