@@ -57,3 +57,28 @@ sudo cp -r arc-icons/src/* /usr/share/icons
 
 # Gnome tweak tool
 sudo apt install gnome-tweak-tool -y
+
+
+echo ""
+echo "========================"
+echo " Development Setup      "
+echo "========================"
+echo ""
+
+
+# Development Setup
+#==================
+
+# Git
+sudo apt install git  -y
+
+# Node with NVM
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+nvm install node
+nvm use node
+
+# Node package manager NPM & Yarn
+npm i -g npm
+npm i -g yarn
