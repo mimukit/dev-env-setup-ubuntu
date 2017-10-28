@@ -2,6 +2,25 @@
 # JavaScript Development Environment Setup on Ubuntu
 # Author : MI MUKIT
 
+
+echo ""
+echo "========================"
+echo " Adding Essential Repos "
+echo "========================"
+echo ""
+
+# Adding Essential Repos
+#=======================
+
+# Theme Repos
+sudo add-apt-repository ppa:numix/ppa -y
+sudo apt-add-repository ppa:tista/adapta -y
+
+# Software Repos
+sudo add-apt-repository ppa:plushuang-tw/uget-stable -y
+
+
+
 echo ""
 echo "===================="
 echo " Basic Setup        "
@@ -10,10 +29,6 @@ echo ""
 
 # Basic Setup
 #============
-
-# Add essential repositories
-sudo add-apt-repository ppa:numix/ppa -y
-sudo apt-add-repository ppa:tista/adapta -y
 
 # System update && upgrade
 sudo apt update
