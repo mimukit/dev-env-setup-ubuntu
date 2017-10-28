@@ -151,4 +151,23 @@ mv studio3t.png /opt/studio-3t/bin/
 sudo cp /Desktop/dev-env-setup-ubuntu/config/studio3t.desktop /usr/share/applications
 
 
+echo ""
+echo "============================="
+echo " Installing Gnome Extensions "
+echo "============================="
+echo ""
+
+
+# Gnome Extensions
+#==================
+
+# Gnome Extension Installer Script
+sudo cp /Desktop/dev-env-setup-ubuntu/config/gnomeshell-extension-manage /usr/local/bin/gnomeshell-extension-manage
+sudo chmod +x /usr/local/bin/gnomeshell-extension-manage
+
+# Dash To Dock
+gnomeshell-extension-manage --install --extension-id 307 --system
+
+# Simple Net Speed
+gnomeshell-extension-manage --install --extension-id 1085 --system
 
