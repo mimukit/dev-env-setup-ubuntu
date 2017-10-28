@@ -12,21 +12,21 @@ echo ""
 #============
 
 # Add essential repositories
-sudo add-apt-repository ppa:numix/ppa
-sudo add-apt-repository ppa:noobslab/macbuntu
+sudo add-apt-repository ppa:numix/ppa -y
+sudo apt-add-repository ppa:tista/adapta -y
 
 # System update && upgrade
 sudo apt update
 sudo apt upgrade
 
 # Install build essentials
-sudo apt install -y gcc build-essential libssl-dev
+sudo apt install gcc build-essential libssl-dev -y
 
 # Package installer for .deb
-sudo apt install -y gdebi
+sudo apt install gdebi -y
 
 # HTTP request tool curl
-sudo apt install -y curl
+sudo apt install curl -y
 
 # Add 'New Document' on context menu
 touch ~/Templates/Untitled\ Document
@@ -40,7 +40,20 @@ echo ""
 
 # Themes & icons
 #===============
-sudo apt install -y numix-gtk-theme numix-icon-theme-circle macbuntu-os-icons-v9
+
+# Themes: Numix, Adapta, Arc Collection
+sudo apt install numix-gtk-theme -y
+sudo apt install adapta-gtk-theme -y
+
+cd /tmp
+wget https://github.com/LinxGem33/OSX-Arc-Plus/releases/download/v1.4.1/osx-arc-collection_1.4.1_amd64.deb
+sudo gdebi -n osx-arc-collection_1.4.1_amd64.deb
+
+# Icons: Numix circle, Arc OSX Icons
+sudo apt install numix-icon-theme-circle -y
+cd /tmp
+git clone https://github.com/LinxGem33/Arc-OSX-Icons.git arc-icons
+sudo cp -r arc-icons/src/* /usr/share/icons
 
 # Gnome tweak tool
-sudo apt install -y gnome-tweak-tool
+sudo apt install gnome-tweak-tool -y
