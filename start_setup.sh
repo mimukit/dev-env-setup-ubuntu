@@ -192,16 +192,11 @@ echo ""
 # Install zsh
 sudo apt install zsh -y
 
-# Set zsh as default terminal
-chsh -s $(which zsh)
-
 # zsh manager: antigen
 curl -L git.io/antigen > $HOME/antigen.zsh
 
 # zsh config set
-sudo mv ~/.zshrc ~/.zshrc_default
 sudo cp ~/Desktop/dev-env-setup-ubuntu/config/.zshrc ~/
-
 
 
 echo ""
