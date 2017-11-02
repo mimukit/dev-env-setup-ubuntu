@@ -177,3 +177,14 @@ gnomeshell-extension-manage --install --extension-id 307 --system
 # Simple Net Speed
 gnomeshell-extension-manage --install --extension-id 1085 --system
 
+
+echo ""
+echo "==================="
+echo " Restarting System "
+echo "==================="
+echo ""
+
+
+# System Restart
+#==================
+sudo reboot
