@@ -178,6 +178,38 @@ gnomeshell-extension-manage --install --extension-id 307 --system
 gnomeshell-extension-manage --install --extension-id 1085 --system
 
 
+
+echo ""
+echo "============================"
+echo " Installing ZSH as terminal "
+echo "============================"
+echo ""
+
+
+# Install & config zsh
+#======================
+
+# Install zsh
+sudo apt install zsh -y
+
+# Set zsh as default terminal
+chsh -s $(which zsh)
+
+# zsh manager: oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# zsh theme: spaceship
+curl -o - https://raw.githubusercontent.com/denysdovhan/spaceship-zsh-theme/master/install.zsh | zsh
+
+# zsh plugin: nvm
+git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
+
+# zsh config set
+sudo mv ~/.zshrc ~/.zshrc_default
+sudo cp ~/Desktop/dev-env-setup-ubuntu/config/.zshrc ~/
+
+
+
 echo ""
 echo "==================="
 echo " Restarting System "
