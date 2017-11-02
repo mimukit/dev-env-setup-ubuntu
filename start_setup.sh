@@ -100,6 +100,10 @@ nvm use node
 npm i -g npm
 npm i -g yarn
 
+# Meteor install
+curl https://install.meteor.com/ | sh
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+
 
 
 echo ""
