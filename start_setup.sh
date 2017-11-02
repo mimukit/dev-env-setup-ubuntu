@@ -31,8 +31,10 @@ echo ""
 #============
 
 # System update && upgrade
-sudo apt update
-sudo apt upgrade
+sudo apt update -y
+sudo apt upgrade -y
+sudo apt dist-upgrade -y
+
 
 # Install build essentials
 sudo apt install gcc build-essential libssl-dev -y
@@ -162,7 +164,7 @@ echo ""
 #==================
 
 # Gnome Extension Installer Script
-sudo cp /Desktop/dev-env-setup-ubuntu/config/gnomeshell-extension-manage /usr/local/bin/gnomeshell-extension-manage
+sudo cp ~/Desktop/dev-env-setup-ubuntu/config/gnomeshell-extension-manage /usr/local/bin/gnomeshell-extension-manage
 sudo chmod +x /usr/local/bin/gnomeshell-extension-manage
 
 # Dash To Dock
