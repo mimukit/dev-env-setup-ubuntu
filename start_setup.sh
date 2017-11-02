@@ -195,14 +195,8 @@ sudo apt install zsh -y
 # Set zsh as default terminal
 chsh -s $(which zsh)
 
-# zsh manager: oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-# zsh theme: spaceship
-curl -o - https://raw.githubusercontent.com/denysdovhan/spaceship-zsh-theme/master/install.zsh | zsh
-
-# zsh plugin: nvm
-git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
+# zsh manager: antigen
+curl -L git.io/antigen > $HOME/antigen.zsh
 
 # zsh config set
 sudo mv ~/.zshrc ~/.zshrc_default
