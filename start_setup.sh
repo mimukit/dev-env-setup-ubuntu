@@ -89,11 +89,10 @@ echo ""
 # Git
 sudo apt install git  -y
 
-# Node with NVM
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
-nvm install --lts
+# Node
+
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+sudo apt-get install -y nodejs
 
 # Node package manager NPM & Yarn
 npm i -g npm
